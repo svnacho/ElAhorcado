@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_creditos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.svnac.elahorcado.CreditosActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp">
+
+            <TextView
+                android:text="Créditos"
+                android:layout_width="match_parent"
+                android:id="@+id/tv_creditos"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_weight="1.45"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="420sp"
+            android:layout_weight="0.81">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="168dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Desarrollador "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_izq0"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:text="Profesores "
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_izq1"
+                    android:textAlignment="textEnd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text=" Ignacio Sánchez Vilar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_der0"
+                    android:textColor="?attr/actionMenuTextColor" />
+
+                <TextView
+                    android:text=" Inma García García"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_der1"
+                    android:textColor="?attr/actionMenuTextColor" />
+
+                <TextView
+                    android:text=" José Antonio Gil Gómez"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:textColor="?attr/actionMenuTextColor" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="igsanvi@etsii.upv.es"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textAlignment="center"
+            android:layout_weight="4.05" />
+    </LinearLayout>
+
+</RelativeLayout>
