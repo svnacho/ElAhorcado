@@ -26,7 +26,6 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         RelativeLayout rl = (RelativeLayout)findViewById(R.id.activity_menu);
-        final TextView tv_fingers = (TextView)findViewById(R.id.tv_fingers);
         Button bt_comenzar_partida = (Button)findViewById(R.id.bt_comenzar_part);
         Button bt_creditos = (Button)findViewById(R.id.bt_creditos);
         Button bt_salir = (Button)findViewById(R.id.bt_salir);
@@ -100,8 +99,6 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 int fingers = event.getPointerCount();
-
-                tv_fingers.setText(Integer.toString(fingers));
 
                 if(fingers >= 3) {
                     Context context = getApplicationContext();

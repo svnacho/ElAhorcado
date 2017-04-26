@@ -3,25 +3,41 @@ package com.example.svnac.elahorcado;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button bt_comenzar;
+    private TextView tvPulsa;
+    private RelativeLayout rl;
+    private Animation animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bt_comenzar = (Button)findViewById(R.id.bt_comenzar);
+        tvPulsa = (TextView) findViewById(R.id.tvPulsa);
+        rl = (RelativeLayout) findViewById(R.id.activity_main);
+        animation = AnimationUtils.loadAnimation(this, R.anim.fadeinout);
 
-        bt_comenzar.setOnClickListener(new View.OnClickListener() {
+        tvPulsa.startAnimation(animation);
+
+        rl.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent (MainActivity.this, MenuActivity.class);
-                startActivity(intent);//Llamar a la actividad del menú
+            public boolean onTouch(View v, MotionEvent event) {
+
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+
+                return true;
             }
         });
     }
